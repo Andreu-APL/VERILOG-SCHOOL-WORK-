@@ -20,9 +20,14 @@ The repository is organized into assignment folders. Each folder contains the Ve
 
 ## Software & Tools
 
-* **IDE:** Intel Quartus Prime 25.1
-* **Simulation:** Questa Intel FPGA Edition / ModelSim
-* **Waveform Viewing:** GTKWave (for `.vcd` files) or Questa
+**Primary FPGA Tools (Windows/Linux):**
+* **Synthesis & Bitstream:** Intel Quartus Prime 25.1
+* **Simulation:** Questa Intel FPGA Edition
+
+**macOS Testing & Verification:**
+* **Toolchain:** [OSS CAD Suite](https://github.com/YosysHQ/oss-cad-suite-build) by YosysHQ
+* **Simulator:** Icarus Verilog (`iverilog`)
+* **Waveform Viewer:** GTKWave
 
 ## How to Run a Practice Module
 
@@ -34,7 +39,7 @@ The repository is organized into assignment folders. Each folder contains the Ve
 
 ### 2. Simulation (Testbench)
 To run the testbench (e.g., `Prim4_tb.v`):
-1.  Open **Questa** or your preferred simulator.
+1.  Open **Questa**.
 2.  Compile `Prim4.V` and `Prim4_tb.v`.
 3.  Run the simulation to generate the waveform.
     * *Note: The `.vcd` file included in the folders contains the recorded simulation output.*
