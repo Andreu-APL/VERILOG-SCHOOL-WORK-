@@ -51,3 +51,9 @@ gtkwave BCD_4displays_tb.vcd
 
 ### 💡 Key Detail for Quartus
 When you open this project in Quartus, make sure to set **`BCD_4displays_W.v`** as your **Top-Level Entity**, since that is the file connecting the logic to the board's pins (`SW` and `HEX`).
+
+
+## 🖥 Simulation Results
+Here is the GTKWave output verifying that the 10-bit binary input (e.g., 914) is correctly separated into Hundreds (9), Tens (1), and Units (4).
+
+![GTKWave Simulation Output](simulation_waveform.jpg)
