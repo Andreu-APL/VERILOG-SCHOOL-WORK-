@@ -49,7 +49,7 @@ iverilog -o a.out BCD_4displays_tb.v BCD_4displays.v BCD.v
 # View the waveform
 gtkwave BCD_4displays_tb.vcd
 
-### 💡 Key Detail for Quartus
+### Key Detail for Quartus
 When you open this project in Quartus, make sure to set **`BCD_4displays_W.v`** as your **Top-Level Entity**, since that is the file connecting the logic to the board's pins (`SW` and `HEX`).
 
 ```
