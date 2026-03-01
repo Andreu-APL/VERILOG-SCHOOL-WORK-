@@ -1,4 +1,4 @@
-# Verilog Class Work
+# Verilog Class Work.
 
 This repository contains my Verilog HDL assignments and practice exercises for my university coursework. The projects are designed to run on Intel/Altera FPGA development boards using Quartus Prime and Questa.
 
