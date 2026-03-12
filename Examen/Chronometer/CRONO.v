@@ -14,7 +14,7 @@ reg [5:0] s_count; // 0 to 59
 reg [15:0] clk_cnt;
 wire tick_1ms = (clk_cnt == 50000); // 50 MHZ / 1000 = 50K 
 
-always @(posedge CLK, posedge rst) 
+    always @(posedge CLK or posedge rst) 
 begin
     if (rst) begin
         clk_cnt <= 0;
