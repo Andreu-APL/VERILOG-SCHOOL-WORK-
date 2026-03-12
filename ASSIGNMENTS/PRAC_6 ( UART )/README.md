@@ -17,8 +17,31 @@ This project implements a Universal Asynchronous Receiver-Transmitter (UART) int
 *   **7-Segment Displays**: Show received data bytes.
 
 ## How to Run
-1.  Open the project in Quartus Prime.
-2.  Compile the design.
-3.  Program the MAX10 Lite FPGA.
-4.  Connect the UART pins to a USB-TTL adapter or another UART device.
-5.  Use a serial terminal (like Putty or TeraTerm) on your PC to send/receive characters.
+
+### Simulation (macOS / OSS CAD Suite)
+To simulate the design using Icarus Verilog and view waveforms in GTKWave:
+
+1.  Open a terminal in the project directory.
+2.  Compile the design:
+    ```bash
+    iverilog -o sim.out UART_tb.v UART_Tx.v UART_Rx.v
+    ```
+3.  Run the simulation:
+    ```bash
+    vvp sim.out
+    ```
+4.  View the waveform:
+    ```bash
+    gtkwave UART_tb.vcd
+    ```
+
+### Implementation (Windows / Quartus Prime)
+To synthesize and program the FPGA:
+
+1.  Open the project in Quartus Prime on Windows.
+2.  Add the design files to the project.
+3.  Assign pins (Connect UART pins to USB-TTL adapter or onboard USB-UART if available).
+4.  Compile the design.
+5.  Program the MAX10 Lite board using the Programmer tool.
+6.  Connect the UART pins to a USB-TTL adapter or another UART device.
+7.  Use a serial terminal (like Putty or TeraTerm) on your PC to send/receive characters (Baud Rate: 9600).

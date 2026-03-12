@@ -28,6 +28,11 @@ module PWM_tb;
     );
 
     initial begin
+        $dumpfile("PWM_tb.vcd");
+        $dumpvars(0, PWM_tb);
+    end
+
+    initial begin
         MAX10_CLK1_50 = 0;
         forever #10 MAX10_CLK1_50 = ~MAX10_CLK1_50;
     end

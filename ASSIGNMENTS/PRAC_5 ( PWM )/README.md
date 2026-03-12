@@ -18,8 +18,32 @@ This project generates a Pulse Width Modulation (PWM) signal to control a servo 
 *   **7-Segment Displays**: Show the selected angle in decimal.
 
 ## How to Run
-1.  Open the project in Quartus Prime.
-2.  Compile the design.
-3.  Program the MAX10 Lite FPGA.
-4.  Connect a Servo Motor or LED to `ARDUINO_IO[0]`.
-5.  Toggle switches to change the PWM duty cycle and observe the motor position or LED brightness.
+
+### Simulation (macOS / OSS CAD Suite)
+To simulate the design using Icarus Verilog and view waveforms in GTKWave:
+
+1.  Open a terminal in the project directory.
+2.  Compile the design:
+    ```bash
+    iverilog -o sim.out PWM_tb.v PWM_W.v comparator.v clk_divide.v BCD_4display.v BCD.v counter.v
+    ```
+    *(Note: Ensure all dependency files like `BCD.v`, `counter.v` are present or adjust the command)*
+3.  Run the simulation:
+    ```bash
+    vvp sim.out
+    ```
+4.  View the waveform:
+    ```bash
+    gtkwave PWM_tb.vcd
+    ```
+
+### Implementation (Windows / Quartus Prime)
+To synthesize and program the FPGA:
+
+1.  Open the project in Quartus Prime on Windows.
+2.  Add all design files to the project.
+3.  Assign pins (ensure `ARDUINO_IO[0]` is mapped correctly).
+4.  Compile the design.
+5.  Program the MAX10 Lite board using the Programmer tool.
+6.  Connect a Servo Motor or LED to `ARDUINO_IO[0]`.
+7.  Toggle switches to change the PWM duty cycle and observe the motor position or LED brightness.

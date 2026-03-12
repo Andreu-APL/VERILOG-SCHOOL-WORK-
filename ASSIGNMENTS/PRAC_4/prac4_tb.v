@@ -2,7 +2,7 @@ module pract4_tb();
 reg rst,clk,in;
 wire out;
 
-over DUT(.rst(rst),.clk(clk),.in(in),.out(out));
+pract4 DUT(.rst(rst),.clk(clk),.in(in),.out(out));
 
 initial begin
 clk= 0;
@@ -48,8 +48,8 @@ initial begin
 end
 
 initial begin
-    $dumpfile("over_tb.vcd");
-    $dumpvars(0,over_tb);
+    $dumpfile("pract4_tb.vcd");
+    $dumpvars(0,pract4_tb);
 end
 
 endmodule
